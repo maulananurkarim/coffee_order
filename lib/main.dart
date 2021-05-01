@@ -38,6 +38,7 @@ class _HomeState extends State<Home> {
           child: SingleChildScrollView(
             physics: const AlwaysScrollableScrollPhysics(),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
@@ -79,7 +80,11 @@ class _HomeState extends State<Home> {
                         MaterialPageRoute(builder: (context) => DetailPage()),
                       );
                     },
-                    child: Text("ORDER NOW"),
+                    child: Text(
+                      "ORDER NOW",
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
                     style: ElevatedButton.styleFrom(
                       primary: greenColor,
                       shape: RoundedRectangleBorder(
