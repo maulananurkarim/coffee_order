@@ -1,3 +1,4 @@
+import 'package:coffee_order/theme.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
@@ -10,13 +11,14 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: backgroundColor,
         body: Padding(
           padding: const EdgeInsets.all(30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -93,13 +95,22 @@ class _DetailPageState extends State<DetailPage> {
               Text(
                 "COMBO",
               ),
+              SizedBox(
+                height: 10,
+              ),
               Container(
+                color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsets.all(25),
                   child: Row(
                     children: [
                       Image.asset(
                         "assets/food.png",
+                      ),
+                      Column(
+                        children: [
+                          Text("CROISSANT"),
+                        ],
                       ),
                     ],
                   ),
