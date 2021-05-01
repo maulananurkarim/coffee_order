@@ -28,6 +28,7 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: backgroundColor,
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               height: 50,
@@ -38,12 +39,19 @@ class _HomeState extends State<Home> {
             ),
             Text(
               "Naise Coffee",
+              style: GoogleFonts.poppins(textStyle: titleTextStyle),
             ),
             SizedBox(
               height: 10,
             ),
-            Text("Naise Coffee can change The"),
-            Text("atmosphere  in the morning"),
+            Text(
+              "Naise Coffee can change The",
+              style: GoogleFonts.poppins(textStyle: subtitleTextStyle),
+            ),
+            Text(
+              "atmosphere  in the morning",
+              style: GoogleFonts.poppins(textStyle: subtitleTextStyle),
+            ),
             SizedBox(
               height: 50,
             ),
@@ -51,7 +59,20 @@ class _HomeState extends State<Home> {
             SizedBox(
               height: 50,
             ),
-            ElevatedButton(onPressed: () {}, child: Text("ORDER NOW"))
+            SizedBox(
+              height: 55,
+              width: 260,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text("ORDER NOW"),
+                style: ElevatedButton.styleFrom(
+                  primary: greenColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

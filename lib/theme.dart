@@ -10,13 +10,13 @@ TextStyle titleTextStyle = TextStyle(
   fontSize: 24,
 );
 
-TextStyle subtitleTextStlye = TextStyle(
+TextStyle subtitleTextStyle = TextStyle(
   color: greyColor,
   fontWeight: FontWeight.w500,
   fontSize: 12,
 );
 
-TextStyle blackTextStlye = TextStyle(
+TextStyle blackTextStyle = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.w600,
   fontSize: 12,
