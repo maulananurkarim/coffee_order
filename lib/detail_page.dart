@@ -193,6 +193,8 @@ class _DetailPageState extends State<DetailPage> {
                             children: [
                               Text(
                                 "CROISSANT",
+                                style: GoogleFonts.poppins(
+                                    textStyle: blackTextStyle),
                               ),
                               SizedBox(
                                 height: 2,
