@@ -20,30 +20,35 @@ class _DetailPageState extends State<DetailPage> {
           child: SingleChildScrollView(
             physics: const AlwaysScrollableScrollPhysics(),
             child: Padding(
-              padding: const EdgeInsets.all(30),
+              padding: const EdgeInsets.only(left: 30, right: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 10,
+                    height: 18,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      GestureDetector(
-                        child: Image.asset(
+                      IconButton(
+                        icon: Image.asset(
                           "assets/btn_back.png",
                           height: 16,
                           width: 21,
                         ),
-                        onTap: () {
+                        tooltip: 'Back',
+                        onPressed: () {
                           Navigator.pop(context);
                         },
                       ),
-                      Image.asset(
-                        "assets/btn_detail.png",
-                        height: 6,
-                        width: 22,
+                      IconButton(
+                        icon: Image.asset(
+                          "assets/btn_detail.png",
+                          height: 6,
+                          width: 22,
+                        ),
+                        tooltip: 'Menu',
+                        onPressed: () {},
                       ),
                     ],
                   ),
@@ -59,7 +64,7 @@ class _DetailPageState extends State<DetailPage> {
                           height: 243,
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Text(
                           "Caramel Macchiato",
@@ -215,10 +220,16 @@ class _DetailPageState extends State<DetailPage> {
                   Center(
                     child: Row(
                       children: [
-                        Image.asset(
-                          "assets/order_pack.png",
-                          height: 57,
+                        SizedBox(
+                          height: 67,
                           width: 67,
+                          child: IconButton(
+                            icon: Image.asset(
+                              "assets/order_pack.png",
+                            ),
+                            tooltip: 'Cart',
+                            onPressed: () {},
+                          ),
                         ),
                         SizedBox(
                           width: 13,
